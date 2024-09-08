@@ -1,0 +1,585 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Impact', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px 20px 50px;
+    height: 80vh;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 4rem;
+    color: #ff66b2;
+    margin: 0;
+    line-height: 1;
+    font-style: italic;
+}
+
+.description {
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #000;
+    background-color: #ff66b2;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Texto "RESULTADO DOS NOSSOS ALUNOS" */
+.student-results {
+    font-size: 24px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 200px; /* Distância de 200px do texto anterior */
+    font-weight: bold;
+}
+
+/* Efeito de marca-texto para "RESULTADO" */
+.highlight-result {
+    background-color: #ff66b2; /* Cor de fundo rosa */
+    color: #000; /* Cor do texto preto */
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+/* Texto adicional */
+.additional-info {
+    font-size: 16px; /* Tamanho do texto */
+    color: #ff66b2; /* Rosa */
+    font-family: Arial, sans-serif;
+    font-style: normal; /* Sem itálico */
+    font-weight: normal; /* Sem negrito */
+    text-transform: uppercase; /* Letras maiúsculas */
+    margin-top: 20px; /* Espaçamento acima do texto adicional */
+    line-height: 1.5;
+}
+
+/* Texto destacado */
+.additional-info .highlight {
+    color: #fff;
+    background-color: #ff66b2; /* Destaque rosa */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Botão */
+.button {
+    display: inline-block;
+    font-size: 16px; /* Tamanho do texto no botão */
+    color: #fff;
+    background-color: #ff2190; /* Rosa */
+    padding: 12px; /* Ajuste o padding para esticar o botão */
+    text-transform: uppercase; /* Letras maiúsculas */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px; /* Borda arredondada */
+    margin-top: 30px; /* Espaçamento acima do botão */
+    border: 2px solid #d1036a; /* Borda rosa */
+    width: 100%; /* Estica o botão para ocupar toda a largura do contêiner */
+    max-width: 400px; /* Largura máxima do botão */
+    text-align: center; /* Alinha o texto no centro */
+    position: relative; /* Necessário para o efeito de borda */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 7px;
+    border: 2px solid rgba(255, 102, 178, 0.5); /* Borda rosa semitransparente */
+    z-index: -1;
+    transition: border-color 0.3s;
+}
+
+.button:hover {
+    background-color: #62ff91; /* Verde chamativo */
+}
+
+.button:hover::before {
+    border-color: rgba(255, 102, 178, 0.7); /* Borda rosa mais visível ao passar o mouse */
+}
+
+/* Imagem */
+.image-content {
+    max-width: 60%; /* Aumenta a largura máxima do contêiner da imagem */
+}
+
+.image-content img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Linha abaixo da imagem */
+.line-below {
+    width: 100%;
+    border-top: 2px solid #ff66b2; /* Linha rosa */
+    margin: 100px 0; /* Espaçamento acima e abaixo da linha */
+}
+
+/* Texto abaixo da linha */
+.training-text {
+    font-size: 24px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Container das imagens */
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+/* Caixa de imagem */
+.image-box {
+    position: relative;
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Imagens */
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada */
+    transition: transform 0.3s ease; /* Transição suave */
+    border: 2px solid rgba(255, 102, 178, 0.5); /* Contorno rosa suave */
+}
+
+.image-box:hover img {
+    transform: scale(1.03); /* Aumenta o tamanho da imagem ao passar o cursor */
+}
+
+/* Sobreposição de texto */
+.text-overlay {
+    position: absolute;
+    bottom: 75px; /* Coloca o texto na parte inferior da imagem */
+    left: 10px;
+    right: 250px;
+    top: 280px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto transparente */
+    padding: 0px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Texto dentro da sobreposição */
+.overlay-text {
+    margin: 0;
+    font-size: 24px; /* Tamanho do texto */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; /* Letras maiúsculas */
+}
+
+.overlay-text.white {
+    color: #fff; /* Texto branco */
+}
+
+.overlay-text.pink {
+    color: #ff66b2; /* Texto rosa */
+}
+
+/* Texto abaixo das imagens */
+.image-caption {
+    font-size: 16px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Texto "RESULTADO DOS NOSSOS ALUNOS" */
+.student-results {
+    font-size: 24px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px; /* Distância de 200px do texto anterior */
+}
+
+/* Contêiner das fotos */
+.photo-container {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente dentro do contêiner */
+    align-items: center; /* Opcional: centraliza verticalmente dentro do contêiner */
+    gap: 5px; /* Espaçamento horizontal entre as imagens */
+    margin-top: 50px;
+}
+
+/* Cada foto */
+.photo {
+    max-width: 200px; /* Define um tamanho máximo para as imagens */
+    border-radius: 10px; /* Arredonda as bordas das imagens */
+    overflow: hidden; /* Garante que o arredondamento funcione */
+    transition: transform 0.3s ease; /* Suaviza o efeito de transformação */
+}
+
+/* Estilo da imagem */
+.photo img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+}
+
+/* Efeito de hover para ampliar a imagem */
+.photo:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+    z-index: 1; /* Garante que a imagem ampliada fique acima das outras */
+}
+
+/* Suavidade geral */
+.photo:hover {
+    transform: translateY(-40px) scale(1.2); /* Movimenta para cima e aumenta o tamanho */
+    z-index: 10; /* Garante que a imagem fique à frente das outras */
+}
+
+
+.comprar {
+    font-size: 35px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 150px; /* Distância de 100px do texto anterior */
+    font-weight: bold
+    
+}
+
+.preço {
+    font-size: 50px;
+    color: #ff0000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px; /* Distância de 100px do texto anterior */
+    font-weight: bold
+}
+
+.npreço {
+    font-size: 100px;
+    color: #64ff76;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px; /* Distância de 100px do texto anterior */
+    font-weight: bold
+}
+
+.nopreço {
+    font-size: 40px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px; /* Distância de 100px do texto anterior */
+    font-weight: bold
+}
+
+.nbutton {
+    display: block; /* Alterado para block para ajudar no alinhamento */
+    font-size: 25px;
+    color: #fff;
+    background-color: #ff2190; /* Rosa */
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 30px auto; /* Centraliza o botão horizontalmente */
+    border: 2px solid #d1036a; /* Borda rosa */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nbutton::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 7px;
+    border: 2px solid rgba(255, 102, 178, 0.5);
+    z-index: -1;
+    transition: border-color 0.3s;
+}
+
+.nbutton:hover {
+    background-color: #62ff91; /* Verde chamativo */
+}
+
+.nbutton:hover::before {
+    border-color: rgba(255, 102, 178, 0.7); /* Borda rosa mais visível ao passar o mouse */
+}
+
+.itens{
+color: #fff;
+display: block;
+text-align: left;
+margin-left: 560px;
+}
+
+.nutri {
+    font-size: 30px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 150px; /* Distância de 100px do texto anterior */
+    font-weight: bold
+}
+
+.IG {
+    margin-right: 600px;
+    font-size: 30px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px; /* Distância de 100px do texto anterior */
+    font-weight: bold
+}
+
+.ross {
+color:#ff2994;
+font-size: 25px;
+}
+
+.Verificado-Correto {
+        max-width: 50px; /* Define um tamanho máximo para as imagens */
+        border-radius: 10px; /* Arredonda as bordas das imagens */
+        overflow: hidden; /* Garante que o arredondamento funcione */
+        margin-left: 200px;
+        margin-top: -50px;
+}
+
+.contai {
+    margin-left: 750px;
+    margin-top: -40px;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.desde{
+color: #fff;
+text-align: left;
+margin-top: -300px;
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 170px;
+}
+
+.retangulo{
+margin-left: 50px;
+margin-top: -610px;
+}
+
+.retanguloo{
+    margin-left: 360px;
+    margin-top: -507px;
+    }
+
+.garaf {
+color: #fff;
+margin-top: -273px;
+margin-left: 105px;
+font-size: 23px;
+}
+
+.giro {
+color: #fff;
+margin-top: -40px;
+font-size: 23px;
+margin-left: 413px;
+
+}
+
+.cor {
+background-color: #fff;
+margin-top: 400px;
+color: #000;
+text-align: center;
+font-size: 55px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+}
+
+.fruta {
+font-size: 30px;
+margin-top: 30px;
+}
+
+/* Estilos das caixas de perguntas (FAQ) */
+.faq-section {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.faq-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faq-box:hover {
+    transform: translateY(-5px);
+}
+
+.faq-instruction {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-toggle-button {
+    background-color: #6200ea;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    text-align: left;
+}
+
+.faq-toggle-button:hover {
+    background-color: #3700b3;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #6200ea;
+    border-radius: 8px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.faq-answer.show {
+    display: block;
+    opacity: 1;
+    max-height: 500px; /* Altura máxima suficiente para o conteúdo */
+    font-size: 30px;
+    text-align: left;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px;
+    position: relative; /* Para permitir o uso de posicionamento absoluto */
+    margin-top: 200px;
+}
+
+.footer-container {
+    position: relative; /* Mantém os elementos dentro do rodapé controláveis individualmente */
+    width: 100%;
+    height: auto; /* Ajusta conforme o conteúdo */
+}
+
+/* Controle da imagem */
+.footer-image {
+    position: absolute; /* Posicionamento absoluto para mover livremente */
+    top: -150px; /* Ajuste conforme desejado */
+    left: 20px; /* Ajuste conforme desejado */
+    width: 300px; /* Tamanho ajustável */
+}
+
+/* Controle dos textos */
+.footer-text:nth-child(2) { /* Primeiro texto */
+    position: absolute;
+    top: -100px; /* Ajuste a posição vertical */
+    right: 700px; /* Ajuste a posição horizontal */
+}
+
+.footer-text:nth-child(3) { /* Segundo texto */
+    position: absolute;
+    top: -100px; /* Ajuste a posição vertical */
+    right: 450px; /* Ajuste a posição horizontal */
+}
+
+.footer-text:nth-child(4) { /* Terceiro texto */
+    position: absolute;
+    top: -85px; /* Ajuste a posição vertical */
+    right: 473px; /* Ajuste a posição horizontal */
+}
+
+.footer-text:nth-child(5) { /* Terceiro texto */
+    position: absolute;
+    top: -70px; /* Ajuste a posição vertical */
+    right: 417px; /* Ajuste a posição horizontal */
+}
+
+.footer-text:nth-child(6) { /* Terceiro texto */
+    position: absolute;
+    top: -100px; /* Ajuste a posição vertical */
+    right: 50px; /* Ajuste a posição horizontal */
+}
+
+.topodosite {
+width: 200px;
+margin-left: -250px;
+margin-top: -170px;
+}
